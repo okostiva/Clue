@@ -50,7 +50,7 @@ public class BoardInitTests {
 		currentRoom = board.getRoomCellAt(13, 13);
 		assertTrue(currentRoom.isDoorway());
 		assertEquals(RoomCell.DoorDirection.LEFT, currentRoom.getDoorDirection());
-		currentRoom = board.getRoomCellAt(5,  6);
+		currentRoom = board.getRoomCellAt(10,  7);
 		assertFalse(currentRoom.isDoorway());
 		currentRoom = board.getRoomCellAt(19, 17);
 		assertFalse(currentRoom.isDoorway());
