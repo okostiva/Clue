@@ -13,6 +13,7 @@ public class Board {
 	private Map<Character, String> rooms;
 	private int numRows;
 	private int numColumns;
+	// Adding comment.
 	
 	private static final String LEGEND_FILE = "~/../Legend.csv";
 	private static final String CONFIG_FILE = "~/../Layout.csv";
