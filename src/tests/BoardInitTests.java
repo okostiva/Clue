@@ -85,6 +85,7 @@ public class BoardInitTests {
 		assertEquals('G', board.getRoomCellAt(6, 16).getRoomInitial());
 	}
 	
+	@Test
 	public void testCalcIndex()
 	{
 		assertEquals(0, board.calcIndex(0, 0));

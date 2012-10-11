@@ -9,11 +9,13 @@ public class RoomCell extends BoardCell {
 	
 	public RoomCell() {
 		// TODO Auto-generated constructor stub
+		super();
 		doorDirection = DoorDirection.NONE;
 		roomInitial = '?';
 	}
 	
-	public RoomCell(DoorDirection doorDirection, char roomInitial) {
+	public RoomCell(DoorDirection doorDirection, char roomInitial, int row, int col) {
+		super(row, col);
 		this.doorDirection = doorDirection;
 		this.roomInitial = roomInitial;
 	}
