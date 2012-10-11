@@ -13,11 +13,15 @@ public class Board {
 	private Map<Character, String> rooms;
 	private int numRows;
 	private int numColumns;
-	// Adding comment.
 	
+	//Use this section when testing my config file
 	private static final String LEGEND_FILE = "~/../Legend.csv";
 	private static final String CONFIG_FILE = "~/../Layout.csv";
-		
+	
+	//Use this section when testing the teacher's config files
+	//private static final String LEGEND_FILE = "~/../TeacherLegend.csv";
+	//private static final String CONFIG_FILE = "~/../TeacherLayout.csv";
+	
 	public Board() {
 		// TODO Auto-generated constructor stub
 		cells = new ArrayList<BoardCell>();
