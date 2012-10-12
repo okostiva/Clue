@@ -4,8 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Board {
 
@@ -34,7 +36,10 @@ public class Board {
 	
 	public BoardCell getCellAt(int index)
 	{
-		return cells.get(index);
+		if (cells.get(index).isWalkway())
+			return (WalkwayCell)cells.get(index);
+		else
+			return (RoomCell)cells.get(index);
 	}
 	
 	public Map<Character, String> getRooms()
@@ -197,6 +202,26 @@ public class Board {
 		}
 		
 		return;
+	}
+	
+	public void calcAdjacencies()
+	{
+		return;
+	}
+
+	public void calcTargets(int startLocation, int numSteps)
+	{
+		return;
+	}
+	
+	public LinkedList<Integer> getAdjList(int index)
+	{
+		return new LinkedList<Integer>();
+	}
+	
+	public TreeSet<BoardCell> getTargets()
+	{
+		return new TreeSet<BoardCell>();
 	}
 	
 	/**

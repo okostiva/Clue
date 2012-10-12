@@ -21,5 +21,4 @@ public class WalkwayCell extends BoardCell {
 	public void draw() {
 		return;
 	}
-
 }
