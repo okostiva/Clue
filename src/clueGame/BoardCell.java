@@ -1,6 +1,6 @@
 package clueGame;
 
-public abstract class BoardCell {
+public abstract class BoardCell implements Comparable<BoardCell> {
 
 	private int row;
 	private int col;
@@ -30,6 +30,25 @@ public abstract class BoardCell {
 	public boolean isDoorway()
 	{
 		return false;
+	}
+	
+	public int compareTo(BoardCell b)
+	{
+		BoardCell currentCell = (BoardCell)b;
+		
+		if (currentCell.row == this.row)
+		{
+			if (currentCell.col == this.col)
+				return 0;
+			else if (currentCell.col > this.col)
+				return -1;
+			else 
+				return 1;
+		}
+		else if (currentCell.row > this.row)
+			return -1;
+		else 
+			return 1;
 	}
 	
 	public abstract void draw();

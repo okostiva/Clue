@@ -68,7 +68,7 @@ public class BoardAdjTargetTests {
 		Assert.assertEquals(2, expectedList.size());
 		
 		expectedList = board.getAdjList(board.calcIndex(12,5));
-		Assert.assertTrue(expectedList.contains(board.calcIndex(13,15)));
+		Assert.assertTrue(expectedList.contains(board.calcIndex(13,5)));
 		Assert.assertTrue(expectedList.contains(board.calcIndex(11,5)));
 		Assert.assertTrue(expectedList.contains(board.calcIndex(12,6)));
 		Assert.assertTrue(expectedList.contains(board.calcIndex(12,4)));
@@ -163,10 +163,12 @@ public class BoardAdjTargetTests {
 	public void testTargetsWalkway_5() {
 		board.calcTargets(board.calcIndex(14,17), 5);
 		Set<BoardCell> expectedSet = board.getTargets();
-		Assert.assertEquals(3, expectedSet.size());
+		Assert.assertEquals(5, expectedSet.size());
 		Assert.assertTrue(expectedSet.contains(board.getCellAt(board.calcIndex(16,14))));
 		Assert.assertTrue(expectedSet.contains(board.getCellAt(board.calcIndex(15,15))));
 		Assert.assertTrue(expectedSet.contains(board.getCellAt(board.calcIndex(15,13))));
+		Assert.assertTrue(expectedSet.contains(board.getCellAt(board.calcIndex(16,16))));
+		Assert.assertTrue(expectedSet.contains(board.getCellAt(board.calcIndex(17,17))));
 	}
 	
 	@Test
